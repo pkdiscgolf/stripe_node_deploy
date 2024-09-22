@@ -23,7 +23,7 @@ app.get('/store', (req, res) => {
             res.status(500).end()
         } else {
             res.render('store.ejs', {
-                stripePublicKey: stripePublicKey,
+                stripePublicKey: stripePublicKey, 
                 items: JSON.parse(data)
             });
         }
