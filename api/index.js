@@ -1,3 +1,6 @@
+
+// this is a copy of "server.js" which I moved here to try and get the server to run.
+
 if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
