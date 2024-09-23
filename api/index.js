@@ -34,7 +34,7 @@ app.get('/store', (req, res) => {
 });
 
 app.post('/purchase', (req, res) => {
-    fs.readFile('items.json', (error, data) => {
+    fs.readFile('items.json', (error, data) => { 
         if(error){
             res.status(500).end()
         } else {
