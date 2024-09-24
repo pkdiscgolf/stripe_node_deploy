@@ -31,8 +31,11 @@ app.get('/store', (req, res) => {
     //         });
     //     }
     // });
-    res.status(200)
+    res.send("Hello!")
+    
 });
+
+// app.get("/hello", (req, res) => res.send("Hello!"));
 
 app.post('/purchase', (req, res) => {
     fs.readFile('items.json', (error, data) => { 
