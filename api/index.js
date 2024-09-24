@@ -21,17 +21,18 @@ app.use(express.static('public'));
 
 app.get('/store', (req, res) => {
     console.log('store')
-    // fs.readFile('items.json', (error, data) => {
-    //     if(error){
-    //         res.status(500).end()
-    //     } else {
+    fs.readFile('items.json', (error, data) => {
+        if(error){
+            res.status(500).end()
+        } else {
     //         res.render('store.ejs', {
     //             stripePublicKey: stripePublicKey, 
     //             items: JSON.parse(data)
     //         });
-    //     }
-    // });
     res.send("Hello!")
+        }
+    });
+    
     
 });
 
