@@ -21,17 +21,33 @@ app.use(express.static('public'));
 
 app.get('/store', (req, res) => {
     console.log('store')
-    fs.readFile('items.json', (error, data) => {
-        if(error){
-            res.status(500).end()
-        } else {
+    
+
+
+    const readFIle = path => {
+        fs.readFile(__dirname + path, "utf8", (err, data) => {
+          if (err) {
+            console.log(err.stack);
+            return;
+          }
+          console.log(data.toString());
+        });
+        console.log("Program Ended");
+      };
+
+      // fs.readFile('items.json', (error, data) => {
+    //     if(error){
+    //         res.status(500).end()
+    //     } else {
     //         res.render('store.ejs', {
     //             stripePublicKey: stripePublicKey, 
     //             items: JSON.parse(data)
     //         });
-    res.send("Hello!")
-        }
-    });
+
+
+
+        // }
+    // });
     
     
 });
