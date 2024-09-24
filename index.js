@@ -62,8 +62,12 @@ app.post('/purchase', (req, res) => {
             });
         }
     });
-
 });
+
+app.post('/test', (req, res) => {
+    res.json({ message: 'Test route worked!'})
+});
+
 
 app.all('*', (req, res) => {
     res.status(404).send('<h1>404! Page not found</h1>');
