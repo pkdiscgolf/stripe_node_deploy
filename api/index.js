@@ -35,18 +35,20 @@ app.get('/store', (req, res) => {
         console.log("Program Ended");
       };
 
-      // fs.readFile('items.json', (error, data) => {
-    //     if(error){
-    //         res.status(500).end()
-    //     } else {
-    //         res.render('store.ejs', {
-    //             stripePublicKey: stripePublicKey, 
-    //             items: JSON.parse(data)
-    //         });
+      
+
+      fs.readFile('items.json', (error, data) => {
+        if(error){
+            res.status(500).end()
+        } else {
+            res.render('store.ejs', {
+                stripePublicKey: stripePublicKey, 
+                items: JSON.parse(data)
+            });
 
 
 
-        // }
+        }
     // });
     
     
