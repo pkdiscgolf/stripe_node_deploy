@@ -2,15 +2,15 @@
 // this is a copy of "server.js" which I moved here to try and get the server to run.
 
 if(process.env.NODE_ENV !== 'production'){
-    require('dotenv').config()
+    import('dotenv').config()
 }
 
 const stripeSecretKey=process.env.STRIPE_SECRET_KEY
 const stripePublicKey=process.env.STRIPE_PUBLIC_KEY
 
-const express = require('express');
-const fs = require('fs');
-const stripe = require('stripe')(stripeSecretKey);
+const express = import('express');
+const fs = import('fs');
+const stripe = import('stripe')(stripeSecretKey);
 
 const app = express();
 app.set('view engine', 'ejs');
