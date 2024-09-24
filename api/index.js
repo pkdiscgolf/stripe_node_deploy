@@ -31,6 +31,7 @@ app.get('/store', (req, res) => {
     //         });
     //     }
     // });
+    res.status(200)
 });
 
 app.post('/purchase', (req, res) => {
