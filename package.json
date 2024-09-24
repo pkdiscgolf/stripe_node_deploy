@@ -16,6 +16,6 @@
   "devDependencies": {
     "dotenv": "^16.4.5"
   },
-  "type": "module"
+"type":"commonjs"
 }
  
