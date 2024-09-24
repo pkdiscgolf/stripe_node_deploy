@@ -52,3 +52,15 @@ but test route not loading
 
 https://vercel.com/guides/npm-run-start-not-working
 says here that I cannot simply run "node server.js" to run the express server
+
+
+
+
+
+
+
+
+
+
+//got test route working using vercel.json { "version": 2, "rewrites": [{ "source": "/(.*)", "destination": "/api" }] }
+error route also works
