@@ -65,7 +65,7 @@ app.post('/purchase', (req, res) => {
 
 });
 
-app.post('/test', (req, res) => {
+app.get('/test', (req, res) => {
     res.json({ message: 'Test route worked!'})
 });
 
